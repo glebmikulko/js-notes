@@ -1,11 +1,14 @@
 # Fundamentals
 
+## Basic
 - `use strict` switches engine in a "modern mode". Several language features, like “classes” and “modules”, enable strict mode automatically. It's recommended to aloways start script with this line.
 - `const` and `let` are modern keywords for variable declaration. `var` is old-school variant.
 - no need in semicolon after function declaration (don't mess with function expression)
-- There are 7 basic data types:
+
+## Data types
+There are 7 basic data types:
 ![data types](assets/pictures/data_types.jpg)
-- Type conversions:
+## Type conversions:
 
 | value  | String(value) |
 | ------------- | ------------- |
@@ -30,7 +33,7 @@
 | "0" / " "  | true |
 > Occurs in logical operations
 
-- Operators:
+## Operators:
 
 ```javascript
 alert( 1 + '2' ); //  "12";
@@ -42,13 +45,13 @@ let b = 1;
 let a = b++; // a = 1, b = 2;
 a = ++b; // a = 3, b = 3
 ```
-- Comparison
-	- String are compared in lexicographical order (unicode codes)
-	- JS compares different types by converting them to numbers
-	- `null == undefined` they equal each other, but not any other value
-	- Be careful when using comparisons like > or < with variables that can occasionally be null/undefined. Checking for null/undefined separately is a good idea.
+## Comparison
+- String are compared in lexicographical order (unicode codes)
+- JS compares different types by converting them to numbers
+- `null == undefined` they equal each other, but not any other value
+- Be careful when using comparisons like > or < with variables that can occasionally be null/undefined. Checking for null/undefined separately is a good idea.
 
-- Loops
+##  Loops
 
 ```javascript
 while(condition) { statements };
@@ -68,9 +71,7 @@ outer: for(...) {
 	}
 }
 ```
-- Switch
-	- checks by strict ===
-	- `break` is a must (unless 'grouping' cases)
+## Switch
 
 ```javascript
 switch(x) {
@@ -85,21 +86,22 @@ switch(x) {
 		[break]
 }
 ```
-- Functions
-	- default `return` value is `undefined`
-	- values passed to a function as parameters are copied to its local variables.
-	- function naming prefixes should be agreed among a project devs
-  - a rule of thumb is to use function declaration (instead of expression) if you can use both
-  - function declarations are initialized before script start
-
+- checks by strict ===
+- `break` is a must (unless 'grouping' cases)
+## Functions
 ```javascript
 function abc(a, b, c) {
 	//body;
 	[return ...]
 }
 ```
+- default `return` value is `undefined`
+- values passed to a function as parameters are copied to its local variables.
+- function naming prefixes should be agreed among a project devs
+- a rule of thumb is to use function declaration (instead of expression) if you can use both
+- function declarations are initialized before script start
 
 ```javascript
 (a, b, c) => method(...) // returns result of right part
-(a, b, c) => { body } // return result explicitly
+(a, b, c) => { method(...) } // return result explicitly
 ```
